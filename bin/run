@@ -6,10 +6,15 @@ require_relative "../lib/song.rb"
 require_relative "../config/environment.rb"
 
 song = Song.new(name: "Hello", album: "25")
+song2 = Song.new(name: "Cake", album: "Cake")
+song3 = Song.new(name: "Nirvana", album: "Nevermind")
 puts "song name: " + song.name
 puts "song album: " + song.album
 song.save
-
+song2.save
+song3.save
+binding.pry
 puts Song.find_by_name("Hello")
+puts Song.output_table
 
 # DB[:conn].execute("SELECT * FROM songs")
