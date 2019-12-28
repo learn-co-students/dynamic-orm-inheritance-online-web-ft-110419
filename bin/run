@@ -10,6 +10,12 @@ puts "song name: " + song.name
 puts "song album: " + song.album
 song.save
 
+#Here we create a new Song instance. 
+#Remember, there was no initialize method defined in the Song class itself --
+#it is inherited from the InteractiveRecord class.
+
+After the Song instance is created, information about the song's name and album is printed out with puts. The song instance is then saved to the database.
+
 puts Song.find_by_name("Hello")
 
 # DB[:conn].execute("SELECT * FROM songs")
